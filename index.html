@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,maximum-scale=2">
 
-    <link rel="icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
     <link rel="stylesheet" type="text/css" media="screen" href="index.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="index.js"></script>
 
-    <title>gudificator</title>
+    <title>Гудификатор</title>
 </head>
 
 <body>
@@ -24,9 +24,17 @@
 
     <div class="main_content_wrap">
         <section class="main_content">
-            <textarea placeholder="Исходный текст"></textarea>
-            <textarea placeholder="Гудифицированный текст" readonly></textarea>
-            <button>Гудифицировать</button>
+            <h3 class="levels_header">Степень гудифицирования</h3>
+            <div class="levels_wrap">
+                <img id="levels_image" src="levels.png"/>
+                <div id="levels_hole"></div>
+                <div class="levels_cover"></div>
+            </div>
+            <div id="mySlider"></div>
+            <input id="levels_slider" type="range" min="0" max="4" value="0">
+            <textarea id="source" placeholder="Исходный текст"></textarea>
+            <textarea id="dest" placeholder="Гудифицированный текст" readonly></textarea>
+            <button id="gudify">Гудифицировать</button>
         </section>
     </div>
 </body>
