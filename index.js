@@ -43,7 +43,10 @@ function gudify(source, level) {
 function level0Gu(word) {
     let result = [];
     for (let i = 0; i < word.length; i++) {
-        if (word[i] == "у") {
+        if (word[i] == "г" && isVowel(word[i + 1]) && word[i + 2] == "д") {
+            result.push("гуд");
+            i += 2;
+        } else if (word[i] == "у") {
             if (i == word.length - 1) {
                 if (word[i - 1] == "г") {
                     result.push("у");
